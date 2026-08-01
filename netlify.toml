@@ -1,0 +1,343 @@
+# Caretaz Healthcare — Netlify (Git-connected static site)
+[build]
+  publish = "."
+  command = "exit 0"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Pretty URLs: clean path ↔ .html file
+# 200 = rewrite (URL stays clean). 301 + force = canonicalize away from .html
+
+[[redirects]]
+  from = "/about-us"
+  to = "/about-us.html"
+  status = 200
+[[redirects]]
+  from = "/about-us/"
+  to = "/about-us.html"
+  status = 200
+[[redirects]]
+  from = "/about-us.html"
+  to = "/about-us"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/appointment"
+  to = "/appointment.html"
+  status = 200
+[[redirects]]
+  from = "/appointment/"
+  to = "/appointment.html"
+  status = 200
+[[redirects]]
+  from = "/appointment.html"
+  to = "/appointment"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact-us"
+  to = "/contact-us.html"
+  status = 200
+[[redirects]]
+  from = "/contact-us/"
+  to = "/contact-us.html"
+  status = 200
+[[redirects]]
+  from = "/contact-us.html"
+  to = "/contact-us"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/faqs"
+  to = "/faqs.html"
+  status = 200
+[[redirects]]
+  from = "/faqs/"
+  to = "/faqs.html"
+  status = 200
+[[redirects]]
+  from = "/faqs.html"
+  to = "/faqs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/join-us"
+  to = "/join-us.html"
+  status = 200
+[[redirects]]
+  from = "/join-us/"
+  to = "/join-us.html"
+  status = 200
+[[redirects]]
+  from = "/join-us.html"
+  to = "/join-us"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pricing"
+  to = "/pricing.html"
+  status = 200
+[[redirects]]
+  from = "/pricing/"
+  to = "/pricing.html"
+  status = 200
+[[redirects]]
+  from = "/pricing.html"
+  to = "/pricing"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services"
+  to = "/services/index.html"
+  status = 200
+[[redirects]]
+  from = "/services/"
+  to = "/services/index.html"
+  status = 200
+[[redirects]]
+  from = "/services/index.html"
+  to = "/services/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/24-hour-care"
+  to = "/services/24-hour-care.html"
+  status = 200
+[[redirects]]
+  from = "/services/24-hour-care/"
+  to = "/services/24-hour-care.html"
+  status = 200
+[[redirects]]
+  from = "/services/24-hour-care.html"
+  to = "/services/24-hour-care"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/cancer-care"
+  to = "/services/cancer-care.html"
+  status = 200
+[[redirects]]
+  from = "/services/cancer-care/"
+  to = "/services/cancer-care.html"
+  status = 200
+[[redirects]]
+  from = "/services/cancer-care.html"
+  to = "/services/cancer-care"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/carer-respite"
+  to = "/services/carer-respite.html"
+  status = 200
+[[redirects]]
+  from = "/services/carer-respite/"
+  to = "/services/carer-respite.html"
+  status = 200
+[[redirects]]
+  from = "/services/carer-respite.html"
+  to = "/services/carer-respite"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/companionship-care"
+  to = "/services/companionship-care.html"
+  status = 200
+[[redirects]]
+  from = "/services/companionship-care/"
+  to = "/services/companionship-care.html"
+  status = 200
+[[redirects]]
+  from = "/services/companionship-care.html"
+  to = "/services/companionship-care"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/dementia-care"
+  to = "/services/dementia-care.html"
+  status = 200
+[[redirects]]
+  from = "/services/dementia-care/"
+  to = "/services/dementia-care.html"
+  status = 200
+[[redirects]]
+  from = "/services/dementia-care.html"
+  to = "/services/dementia-care"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/holiday-companionship"
+  to = "/services/holiday-companionship.html"
+  status = 200
+[[redirects]]
+  from = "/services/holiday-companionship/"
+  to = "/services/holiday-companionship.html"
+  status = 200
+[[redirects]]
+  from = "/services/holiday-companionship.html"
+  to = "/services/holiday-companionship"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/hospital-to-home"
+  to = "/services/hospital-to-home.html"
+  status = 200
+[[redirects]]
+  from = "/services/hospital-to-home/"
+  to = "/services/hospital-to-home.html"
+  status = 200
+[[redirects]]
+  from = "/services/hospital-to-home.html"
+  to = "/services/hospital-to-home"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/hourly-care"
+  to = "/services/hourly-care.html"
+  status = 200
+[[redirects]]
+  from = "/services/hourly-care/"
+  to = "/services/hourly-care.html"
+  status = 200
+[[redirects]]
+  from = "/services/hourly-care.html"
+  to = "/services/hourly-care"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/housekeeping-services"
+  to = "/services/housekeeping-services.html"
+  status = 200
+[[redirects]]
+  from = "/services/housekeeping-services/"
+  to = "/services/housekeeping-services.html"
+  status = 200
+[[redirects]]
+  from = "/services/housekeeping-services.html"
+  to = "/services/housekeeping-services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/live-in-care-for-couples"
+  to = "/services/live-in-care-for-couples.html"
+  status = 200
+[[redirects]]
+  from = "/services/live-in-care-for-couples/"
+  to = "/services/live-in-care-for-couples.html"
+  status = 200
+[[redirects]]
+  from = "/services/live-in-care-for-couples.html"
+  to = "/services/live-in-care-for-couples"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/overnight-care"
+  to = "/services/overnight-care.html"
+  status = 200
+[[redirects]]
+  from = "/services/overnight-care/"
+  to = "/services/overnight-care.html"
+  status = 200
+[[redirects]]
+  from = "/services/overnight-care.html"
+  to = "/services/overnight-care"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/palliative-care"
+  to = "/services/palliative-care.html"
+  status = 200
+[[redirects]]
+  from = "/services/palliative-care/"
+  to = "/services/palliative-care.html"
+  status = 200
+[[redirects]]
+  from = "/services/palliative-care.html"
+  to = "/services/palliative-care"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/parkinsons-disease"
+  to = "/services/parkinsons-disease.html"
+  status = 200
+[[redirects]]
+  from = "/services/parkinsons-disease/"
+  to = "/services/parkinsons-disease.html"
+  status = 200
+[[redirects]]
+  from = "/services/parkinsons-disease.html"
+  to = "/services/parkinsons-disease"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/stroke-care"
+  to = "/services/stroke-care.html"
+  status = 200
+[[redirects]]
+  from = "/services/stroke-care/"
+  to = "/services/stroke-care.html"
+  status = 200
+[[redirects]]
+  from = "/services/stroke-care.html"
+  to = "/services/stroke-care"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/supported-living"
+  to = "/services/supported-living.html"
+  status = 200
+[[redirects]]
+  from = "/services/supported-living/"
+  to = "/services/supported-living.html"
+  status = 200
+[[redirects]]
+  from = "/services/supported-living.html"
+  to = "/services/supported-living"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/urgent-care"
+  to = "/services/urgent-care.html"
+  status = 200
+[[redirects]]
+  from = "/services/urgent-care/"
+  to = "/services/urgent-care.html"
+  status = 200
+[[redirects]]
+  from = "/services/urgent-care.html"
+  to = "/services/urgent-care"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
