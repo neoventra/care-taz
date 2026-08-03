@@ -58,6 +58,34 @@
   color: var(--navy);
   border-color: var(--border-teal);
 }
+
+/* Navy header site-wide — logo + menu stay readable */
+.site-header {
+  background: var(--navy);
+  border-bottom-color: var(--border-teal);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
+}
+.nav > a,
+.nav__dropdown > a {
+  color: var(--white);
+}
+.nav > a:hover,
+.nav > a.is-active,
+.nav__dropdown > a:hover,
+.nav__dropdown > a.is-active {
+  color: var(--teal);
+  border-color: var(--border-teal);
+  background: rgba(240, 196, 25, 0.14);
+}
+.nav-toggle {
+  border-color: rgba(240, 196, 25, 0.45);
+}
+.nav-toggle span {
+  background: var(--white);
+}
+.site-header.is-open .nav {
+  background: var(--navy);
+}
 .social-dot {
   border-color: rgba(240, 196, 25, 0.45);
 }
@@ -66,7 +94,7 @@
   border-color: var(--peach);
   color: var(--navy);
 }
-.topbar a:hover { color: var(--teal); }
+.topbar a:hover { color: var(--teal-dark); }
 
 /* Hero — gold accents on navy film */
 .hero--cinematic {

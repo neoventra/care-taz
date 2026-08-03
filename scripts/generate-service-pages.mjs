@@ -942,18 +942,18 @@ const SERVICES = [
 
 const ALL_NAV = [
   ["urgent-care.html", "Urgent Care"],
-  ["dementia-care.html", "Dementia Care"],
-  ["overnight-care.html", "Overnight Care"],
   ["24-hour-care.html", "24-Hour Care"],
   ["hourly-care.html", "Hourly Care"],
+  ["live-in-care-for-couples.html", "Live-In Care For Couples"],
+  ["overnight-care.html", "Overnight Care"],
   ["palliative-care.html", "Palliative / End-of-Life Care"],
+  ["dementia-care.html", "Dementia Care"],
   ["parkinsons-disease.html", "Parkinson’s Disease"],
   ["supported-living.html", "Supported Living"],
   ["holiday-companionship.html", "Holiday Companionship Care Breaks"],
   ["carer-respite.html", "Carer Respite Break Cover"],
   ["stroke-care.html", "Stroke Care"],
   ["cancer-care.html", "Cancer Care"],
-  ["live-in-care-for-couples.html", "Live-In Care For Couples"],
   ["hospital-to-home.html", "Hospital to Home Care"],
   ["companionship-care.html", "Companionship Care"],
   ["housekeeping-services.html", "Housekeeping Services"],
@@ -1123,8 +1123,8 @@ function renderPage(s) {
   </div>
   <header class="site-header">
     <div class="container site-header__inner">
-      <a class="logo" href="../index.html" aria-label="Caretaz Healthcare Ltd. home">
-        <img src="../assets/images/logo.png" alt="Caretaz Healthcare Ltd.">
+      <a class="logo" href="../index.html" aria-label="Caretaz Healthcare home">
+        <img src="../assets/images/logo.png" alt="Caretaz Healthcare">
       </a>
       <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
       <nav class="nav" aria-label="Primary">
@@ -1349,7 +1349,7 @@ ${formOpts}
     <div class="container">
       <div class="footer-grid">
         <div>
-          <a class="logo" href="../index.html"><img src="../assets/images/logo-on-dark.png" alt="Caretaz Healthcare Ltd."></a>
+          <a class="logo" href="../index.html"><img src="../assets/images/logo.png" alt="Caretaz Healthcare"></a>
           <p style="margin-top:.75rem;">Compassion is the basis of our care. We support independence, privacy and flexibility with reliable, person-centred home care.</p>
         </div>
         <div>
@@ -1368,10 +1368,10 @@ ${formOpts}
           <h4>Our Services</h4>
           <div class="footer-links">
             <a href="../services/urgent-care.html">Urgent Care</a>
-            <a href="../services/dementia-care.html">Dementia Care</a>
-            <a href="../services/overnight-care.html">Overnight Care</a>
             <a href="../services/24-hour-care.html">24-Hour Care</a>
             <a href="../services/hourly-care.html">Hourly Care</a>
+            <a href="../services/live-in-care-for-couples.html">Live-In Care For Couples</a>
+            <a href="../services/overnight-care.html">Overnight Care</a>
             <a href="../services/palliative-care.html">Palliative / End-of-Life Care</a>
             <a href="../services/index.html">View all services</a>
           </div>
