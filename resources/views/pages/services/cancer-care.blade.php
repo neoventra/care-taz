@@ -1,0 +1,327 @@
+@extends('layouts.app')
+
+@section('title', 'Cancer Care in Nottingham | Treatment Support at Home | Caretaz Healthcare')
+@section('description', 'Cancer care in Nottingham from Caretaz Healthcare — sensitive, practical home support through chemotherapy, radiotherapy and recovery. CQC-regulated personal care, appointments and companionship.')
+@section('body_class', 'sd')
+@push('styles')
+  <link rel="stylesheet" href="{{ versioned_asset('css/service-detail.css') }}">
+@endpush
+
+@section('content')
+<main>
+<section class="sd-hero" aria-labelledby="sd-hero-heading">
+      <div class="sd-hero__bg" style="background-image:url('../assets/images/care-health-check.jpg')" aria-hidden="true"></div>
+      <div class="sd-hero__inner">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="{{ route('home') }}">Home</a> <span>/</span>
+          <a href="{{ route('home') }}">Services</a> <span>/</span>
+          <span>Cancer Care</span>
+        </nav>
+        <p class="sd-brand">Caretaz Healthcare · Cancer treatment support</p>
+        <h1 id="sd-hero-heading">Support through treatment — with <em>dignity</em> at home.</h1>
+        <p class="sd-hero__lead">Sensitive, practical care across Nottingham during chemotherapy, radiotherapy and recovery — so you are never left to manage appointments, fatigue or daily living alone.</p>
+        <div class="btn-row">
+          <a class="btn btn--teal" href="#appointment">Book Assessment</a>
+          <a class="btn btn--outline" href="tel:03330344121">Call 0333 034 4121</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-trust">
+      <div class="container">
+        <div class="sd-trust__grid">
+          <div class="sd-trust__card reveal">
+            <strong>Treatment support</strong>
+            <span class="sd-trust__label">Through chemo &amp; recovery</span>
+          </div>
+          <div class="sd-trust__card reveal">
+            <strong>CQC</strong>
+            <span class="sd-trust__label">Fully regulated</span>
+          </div>
+          <div class="sd-trust__card reveal">
+            <strong>Nottingham</strong>
+            <span class="sd-trust__label">City &amp; surrounding areas</span>
+          </div>
+          <div class="sd-trust__card reveal">
+            <strong>Dignity</strong>
+            <span class="sd-trust__label">Privacy &amp; gentle pacing</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-section" aria-labelledby="about-service">
+      <div class="container">
+        <div class="sd-split">
+          <div class="sd-split__media reveal-left">
+            <img src="{{ asset('assets/images/care-health-check.jpg') }}" alt="Cancer care support at home with Caretaz Healthcare" width="720" height="540" loading="eager">
+            <div class="sd-split__float">
+              <strong>Beside you</strong>
+              <span>Treatment &amp; recovery</span>
+            </div>
+          </div>
+          <div class="sd-split__copy reveal-right">
+            <p class="eyebrow">About this service</p>
+            <h2 id="about-service">Practical help when treatment takes everything.</h2>
+            <p>Cancer care from Caretaz Healthcare is for people going through chemotherapy, radiotherapy or recovery who want sensitive support at home — not a clinical ward atmosphere, but calm, dependable help with the realities of treatment days.</p>
+            <p>Our carers can accompany you to appointments, help with personal care when fatigue hits, prepare gentle meals, prompt medication and offer quiet company when energy is low. We work around clinic schedules and how you feel after each session.</p>
+            <p>Families often tell us the hardest part is the gap between hospital visits. We fill that gap with CQC-regulated care that protects dignity, privacy and whatever independence you still want to keep.</p>
+            <div class="sd-pill-row">
+              <span class="sd-pill"><i></i> Appointment support</span>
+              <span class="sd-pill"><i></i> Personal care</span>
+              <span class="sd-pill"><i></i> Nutrition &amp; rest</span>
+              <span class="sd-pill"><i></i> Emotional company</span>
+            </div>
+            <div class="btn-row">
+              <a class="btn btn--navy" href="{{ route('appointment') }}">Make Appointment</a>
+              <a class="btn btn--outline-teal" href="{{ route('home') }}">All Services</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-section sd-section--fog" aria-labelledby="includes-heading">
+      <div class="container">
+        <div class="sd-head reveal">
+          <p class="eyebrow">What’s included</p>
+          <h2 id="includes-heading">Support shaped around treatment life</h2>
+          <p>Every package is personalised after assessment — these are the building blocks families ask for most during cancer care.</p>
+        </div>
+        <div class="sd-includes">
+          <article class="sd-include reveal">
+            <span class="sd-include__label">Appointments</span>
+            <h3>Treatment day support</h3>
+            <p>Help getting ready, travelling to chemo or radiotherapy and settling home afterwards when energy is spent.</p>
+          </article>
+          <article class="sd-include reveal">
+            <span class="sd-include__label">Daily living</span>
+            <h3>Personal care</h3>
+            <p>Washing, dressing and toileting support delivered gently when side effects make self-care harder.</p>
+          </article>
+          <article class="sd-include reveal">
+            <span class="sd-include__label">Nutrition</span>
+            <h3>Meals during treatment</h3>
+            <p>Light, appealing food and hydration prompts when appetite, taste or nausea make eating difficult.</p>
+          </article>
+          <article class="sd-include reveal">
+            <span class="sd-include__label">Health</span>
+            <h3>Medication prompts</h3>
+            <p>Timely reminders for prescribed medicines and symptom relief, recorded clearly for family and clinicians.</p>
+          </article>
+          <article class="sd-include reveal">
+            <span class="sd-include__label">Energy</span>
+            <h3>Fatigue &amp; pacing help</h3>
+            <p>Assistance with daily tasks so precious energy goes where you choose — rest, family or recovery.</p>
+          </article>
+          <article class="sd-include reveal">
+            <span class="sd-include__label">Family</span>
+            <h3>Family liaison</h3>
+            <p>Updates that keep relatives informed without adding pressure on treatment days.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-section sd-section--ink" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="sd-head reveal">
+          <p class="eyebrow" style="color:var(--teal);">Why families choose this</p>
+          <h2 id="why-heading">Care that respects the journey</h2>
+          <p>More than a service label — a standard of how we show up through treatment.</p>
+        </div>
+        <div class="sd-values">
+          <article class="sd-value reveal">
+            <div class="sd-value__num">01</div>
+            <h3>Sensitive timing</h3>
+            <p>Visits planned around clinic days, recovery windows and how you feel after each session.</p>
+          </article>
+          <article class="sd-value reveal">
+            <div class="sd-value__num">02</div>
+            <h3>Same familiar carers</h3>
+            <p>Continuity matters when trust and quiet understanding make hard days easier.</p>
+          </article>
+          <article class="sd-value reveal">
+            <div class="sd-value__num">03</div>
+            <h3>CQC-regulated</h3>
+            <p>Trained, vetted carers under independent oversight — standards you can rely on.</p>
+          </article>
+          <article class="sd-value reveal">
+            <div class="sd-value__num">04</div>
+            <h3>Works with clinical teams</h3>
+            <p>We follow the practical guidance you share from oncology and community nursing.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-section" aria-labelledby="process-heading">
+      <div class="container">
+        <div class="sd-head reveal">
+          <p class="eyebrow">How it starts</p>
+          <h2 id="process-heading">Three clear steps to care</h2>
+          <p>No jargon. No pressure — just a path that feels human.</p>
+        </div>
+        <div class="sd-process">
+          <article class="sd-step reveal">
+            <div class="sd-step__num">01</div>
+            <h3>Make contact</h3>
+            <p>Call, email or book online. Tell us about treatment schedules and what support would help most.</p>
+          </article>
+          <article class="sd-step reveal">
+            <div class="sd-step__num">02</div>
+            <h3>Assessment</h3>
+            <p>We meet at home to understand routines, fatigue patterns, risks and goals for care.</p>
+          </article>
+          <article class="sd-step reveal">
+            <div class="sd-step__num">03</div>
+            <h3>Care begins</h3>
+            <p>Agree the plan, meet your carers, and start support timed around treatment and recovery.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-section sd-section--fog" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="sd-head reveal">
+          <p class="eyebrow">Good to know</p>
+          <h2 id="faq-heading">Questions families ask first</h2>
+          <p>Straight answers before you book.</p>
+        </div>
+        <div class="sd-faq">
+          <details class="reveal">
+            <summary>Can carers help with chemotherapy or radiotherapy appointments?</summary>
+            <div class="sd-faq__body">Yes. We can accompany you to hospital or clinic appointments, help with travel logistics and settle you back home afterwards — so treatment days feel less overwhelming for you and your family.</div>
+          </details>
+          <details class="reveal">
+            <summary>What support is available during treatment fatigue?</summary>
+            <div class="sd-faq__body">Carers assist with personal care, light meals, hydration, medication prompts and paced daily tasks when energy is low. Visits are timed around how you feel on treatment days and recovery periods.</div>
+          </details>
+          <details class="reveal">
+            <summary>Do you work alongside clinical cancer teams?</summary>
+            <div class="sd-faq__body">We coordinate with the care plans you share from oncology, nursing and community teams. Our role is practical and emotional support at home — not replacing clinical treatment.</div>
+          </details>
+          <details class="reveal">
+            <summary>Is cancer care at home CQC-regulated?</summary>
+            <div class="sd-faq__body">Yes. All Caretaz cancer support is delivered under our Care Quality Commission registration by trained, vetted carers who understand dignity and privacy during treatment.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-section" aria-labelledby="related-heading">
+      <div class="container">
+        <div class="sd-head reveal">
+          <p class="eyebrow">Explore further</p>
+          <h2 id="related-heading">Related care pathways</h2>
+          <p>Many families combine services as needs evolve.</p>
+        </div>
+        <div class="sd-related">
+          <a class="reveal" href="{{ route('services.show', 'palliative-care') }}">
+            <div class="sd-related__media"><img src="{{ asset('assets/images/care-evening-comfort.jpg') }}" alt="Palliative / End-of-Life Care" width="640" height="360" loading="lazy"></div>
+            <div class="sd-related__body">
+              <span class="sd-related__cat">Specialist</span>
+              <h3>Palliative / End-of-Life Care</h3>
+            </div>
+          </a>
+          <a class="reveal" href="{{ route('services.show', 'hospital-to-home') }}">
+            <div class="sd-related__media"><img src="{{ asset('assets/images/care-banner-companionship.jpg') }}" alt="Hospital to Home Care" width="640" height="360" loading="lazy"></div>
+            <div class="sd-related__body">
+              <span class="sd-related__cat">Transition</span>
+              <h3>Hospital to Home Care</h3>
+            </div>
+          </a>
+          <a class="reveal" href="{{ route('services.show', 'companionship-care') }}">
+            <div class="sd-related__media"><img src="{{ asset('assets/images/care-tablet-together.jpg') }}" alt="Companionship Care" width="640" height="360" loading="lazy"></div>
+            <div class="sd-related__body">
+              <span class="sd-related__cat">Wellbeing</span>
+              <h3>Companionship Care</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-section sd-section--fog">
+      <div class="container">
+        <div class="cqc-banner reveal-zoom">
+          <img src="{{ asset('assets/images/cqc.png') }}" alt="Care Quality Commission">
+          <div>
+            <h3>Fully Regulated by The Care Quality Commission (CQC)</h3>
+            <p>Caretaz Healthcare is registered with and regulated by the CQC, the independent body overseeing health and social care in England, with our practices routinely assessed against national standards.</p>
+            <p>We're also proudly registered with the ICO, reflecting our commitment to protecting your personal information.</p>
+          </div>
+          <div class="badge-row"><img src="{{ asset('assets/images/ico.png') }}" alt="ICO registered"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-section">
+      <div class="container">
+        <div class="sd-finale reveal">
+          <div>
+            <p class="eyebrow" style="color:var(--teal);">Ready when you are</p>
+            <h2>Ready for cancer care that feels human?</h2>
+            <p>Tell us about treatment schedules and what a typical week looks like — we’ll propose sensitive support that protects dignity at home.</p>
+            <div class="btn-row">
+              <a class="btn btn--teal" href="{{ route('appointment') }}">Make an Appointment</a>
+              <a class="btn btn--outline" href="tel:03330344121">Call 0333 034 4121</a>
+            </div>
+          </div>
+          <div class="sd-finale__media">
+            <img src="{{ asset('assets/images/care-evening-comfort.jpg') }}" alt="Cancer care support with Caretaz Healthcare" width="560" height="360" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--mist" id="appointment">
+      <div class="container appoint-grid">
+        <div class="reveal">
+          <p class="eyebrow">Make appointment</p>
+          <h2>Book an assessment</h2>
+          <p>Share a few details and we’ll arrange a conversation as soon as possible. For urgent needs, please telephone.</p>
+          <p><strong>Phone:</strong> <a href="tel:03330344121">0333 034 4121</a><br>
+             <strong>Email:</strong> <a href="mailto:info@caretazhealthcare.co.uk">info@caretazhealthcare.co.uk</a><br>
+             <strong>Address:</strong> Suite B/105, Blenheim Court, 86-88 Mansfield Road, Nottingham NG1 3HD</p>
+        </div>
+        <form class="form-card reveal" data-appointment-form>
+          <div class="form-grid">
+            <div class="form-field"><label for="name">Name</label><input id="name" name="name" required autocomplete="name"></div>
+            <div class="form-field"><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+            <div class="form-field"><label for="phone">Phone</label><input id="phone" name="phone" required autocomplete="tel"></div>
+            <div class="form-field"><label for="service">Select Services</label>
+              <select id="service" name="service" required>
+                <option>Urgent Care</option>
+                <option>Hourly Care</option>
+                <option>Overnight Care</option>
+                <option>24-Hour Care</option>
+                <option>Dementia Care</option>
+                <option>Parkinson's Care</option>
+                <option>Stroke Care</option>
+                <option selected>Cancer Care</option>
+                <option>Palliative / End-of-Life Care</option>
+                <option>Supported Living</option>
+                <option>Live-In Care For Couples</option>
+                <option>Hospital to Home Care</option>
+                <option>Companionship Care</option>
+                <option>Carer Respite</option>
+                <option>Holiday Companionship</option>
+                <option>Housekeeping Services</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-field form-field--full"><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell us a little about treatment support you need…"></textarea></div>
+          </div>
+          <button class="btn btn--teal" type="submit" style="margin-top:.75rem;">Make Appointment</button>
+          <p class="form-note">For urgent needs, please telephone 0333 034 4121.</p>
+        </form>
+      </div>
+    </section>
+</main>
+@endsection
+
+@push('scripts')
+  <script src="{{ versioned_asset('js/service-detail.js') }}"></script>
+@endpush

@@ -1,0 +1,327 @@
+@extends('layouts.app')
+
+@section('title', 'Hourly Home Care in Nottingham | Caretaz Healthcare')
+@section('description', 'Flexible hourly visiting care in Nottingham from Caretaz Healthcare — personal care, meals, medication prompts and companionship, scheduled around your life.')
+@section('body_class', 'sd')
+@push('styles')
+  <link rel="stylesheet" href="{{ versioned_asset('css/service-detail.css') }}">
+@endpush
+
+@section('content')
+<main>
+<section class="sd-hero" aria-labelledby="sd-hero-heading">
+      <div class="sd-hero__bg" style="background-image:url('../assets/images/care-meal-support.jpg')" aria-hidden="true"></div>
+      <div class="sd-hero__inner">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="{{ route('home') }}">Home</a> <span>/</span>
+          <a href="{{ route('home') }}">Services</a> <span>/</span>
+          <span>Hourly Care</span>
+        </nav>
+        <p class="sd-brand">Caretaz Healthcare · Hourly Visiting Care</p>
+        <h1 id="sd-hero-heading">Care that visits when <em>you</em> need it.</h1>
+        <p class="sd-hero__lead">From a few hours a week to several calls a day — CQC-regulated support that protects independence without taking over the home.</p>
+        <div class="btn-row">
+          <a class="btn btn--teal" href="#appointment">Book Assessment</a>
+          <a class="btn btn--outline" href="tel:03330344121">Call 0333 034 4121</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-trust">
+      <div class="container">
+        <div class="sd-trust__grid">
+          <div class="sd-trust__card reveal">
+            <strong>Flexible</strong>
+            <span class="sd-trust__label">Hours that fit life</span>
+          </div>
+          <div class="sd-trust__card reveal">
+            <strong>CQC</strong>
+            <span class="sd-trust__label">Fully regulated</span>
+          </div>
+          <div class="sd-trust__card reveal">
+            <strong>50+</strong>
+            <span class="sd-trust__label">Trained carers</span>
+          </div>
+          <div class="sd-trust__card reveal">
+            <strong>Adapt</strong>
+            <span class="sd-trust__label">Change as needs evolve</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-section" aria-labelledby="about-service">
+      <div class="container">
+        <div class="sd-split">
+          <div class="sd-split__media reveal-left">
+            <img src="{{ asset('assets/images/care-meal-support.jpg') }}" alt="Hourly Care at home with Caretaz Healthcare" width="720" height="540" loading="eager">
+            <div class="sd-split__float">
+              <strong>Flexible</strong>
+              <span>Visit lengths &amp; schedules</span>
+            </div>
+          </div>
+          <div class="sd-split__copy reveal-right">
+            <p class="eyebrow">About this service</p>
+            <h2 id="about-service">Visiting care, built around real routines.</h2>
+            <p>Hourly home care from Caretaz Healthcare is for people who want reliable help with daily living — without a live-in arrangement. Visits can be as light as a couple of hours a week or as frequent as several calls each day.</p>
+            <p>Our carers assist with personal care, meals, medication prompts, mobility and companionship. As needs change, we increase, reduce or reshuffle visits so support always feels proportionate.</p>
+            <p>It’s the ideal entry point for families balancing work and care, and for adults who value staying independent at home with the right help at the right time.</p>
+            <div class="sd-pill-row">
+              <span class="sd-pill"><i></i> Personal care</span>
+              <span class="sd-pill"><i></i> Meals &amp; prompts</span>
+              <span class="sd-pill"><i></i> Companionship</span>
+              <span class="sd-pill"><i></i> Light household help</span>
+            </div>
+            <div class="btn-row">
+              <a class="btn btn--navy" href="{{ route('appointment') }}">Make Appointment</a>
+              <a class="btn btn--outline-teal" href="{{ route('home') }}">All Services</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-section sd-section--fog" aria-labelledby="includes-heading">
+      <div class="container">
+        <div class="sd-head reveal">
+          <p class="eyebrow">What’s included</p>
+          <h2 id="includes-heading">Support shaped around real life</h2>
+          <p>Every package is personalised after assessment — these are the building blocks families ask for most.</p>
+        </div>
+        <div class="sd-includes">
+          <article class="sd-include reveal">
+            <span class="sd-include__label">Daily living</span>
+            <h3>Personal care &amp; dressing</h3>
+            <p>Wash, dress and present yourself with dignity — at a pace that feels comfortable.</p>
+          </article>
+          <article class="sd-include reveal">
+            <span class="sd-include__label">Nutrition</span>
+            <h3>Meals &amp; kitchen support</h3>
+            <p>Preparation, prompting and companionship at mealtimes so nutrition stays on track.</p>
+          </article>
+          <article class="sd-include reveal">
+            <span class="sd-include__label">Wellbeing</span>
+            <h3>Medication reminders</h3>
+            <p>Timely prompts that support compliance without removing control.</p>
+          </article>
+          <article class="sd-include reveal">
+            <span class="sd-include__label">Mobility</span>
+            <h3>Moving with confidence</h3>
+            <p>Steadying assistance around the home and for short outings when needed.</p>
+          </article>
+          <article class="sd-include reveal">
+            <span class="sd-include__label">Connection</span>
+            <h3>Companionship visits</h3>
+            <p>Conversation, shared activities and the reassurance of a familiar face.</p>
+          </article>
+          <article class="sd-include reveal">
+            <span class="sd-include__label">Home</span>
+            <h3>Light household help</h3>
+            <p>Tidying, laundry and small tasks that keep the home manageable.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-section sd-section--ink" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="sd-head reveal">
+          <p class="eyebrow" style="color:var(--teal);">Why families choose this</p>
+          <h2 id="why-heading">Impact you can feel at home</h2>
+          <p>More than a service label — a standard of how we show up.</p>
+        </div>
+        <div class="sd-values">
+          <article class="sd-value reveal">
+            <div class="sd-value__num">01</div>
+            <h3>Flexible visits</h3>
+            <p>Choose frequency and length that match mornings, evenings or weekends.</p>
+          </article>
+          <article class="sd-value reveal">
+            <div class="sd-value__num">02</div>
+            <h3>Independence first</h3>
+            <p>Support only where it is needed — never more than feels right.</p>
+          </article>
+          <article class="sd-value reveal">
+            <div class="sd-value__num">03</div>
+            <h3>Clear estimates</h3>
+            <p>Transparent visiting care pricing discussed before you commit.</p>
+          </article>
+          <article class="sd-value reveal">
+            <div class="sd-value__num">04</div>
+            <h3>Easy to adapt</h3>
+            <p>Scale up after hospital, or ease back when confidence returns.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-section" aria-labelledby="process-heading">
+      <div class="container">
+        <div class="sd-head reveal">
+          <p class="eyebrow">How it starts</p>
+          <h2 id="process-heading">Three clear steps to care</h2>
+          <p>No jargon. No pressure — just a path that feels human.</p>
+        </div>
+        <div class="sd-process">
+          <article class="sd-step reveal">
+            <div class="sd-step__num">01</div>
+            <h3>Make contact</h3>
+            <p>Call, email or book online. Tell us what you need and how soon.</p>
+          </article>
+          <article class="sd-step reveal">
+            <div class="sd-step__num">02</div>
+            <h3>Assessment</h3>
+            <p>We meet at home (or virtually) to understand routines, risks and goals.</p>
+          </article>
+          <article class="sd-step reveal">
+            <div class="sd-step__num">03</div>
+            <h3>Care begins</h3>
+            <p>Agree the plan, meet your carers, and start support that feels settled.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-section sd-section--fog" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="sd-head reveal">
+          <p class="eyebrow">Good to know</p>
+          <h2 id="faq-heading">Questions families ask first</h2>
+          <p>Straight answers before you book.</p>
+        </div>
+        <div class="sd-faq">
+          <details class="reveal">
+            <summary>How many hours of care can I book?</summary>
+            <div class="sd-faq__body">Packages range from a few hours a week to multiple visits each day. We design the schedule after assessment so it fits routines, not the other way around.</div>
+          </details>
+          <details class="reveal">
+            <summary>Can hourly care include personal care?</summary>
+            <div class="sd-faq__body">Yes. Personal care, dressing, meals, medication prompts, mobility help and companionship can all form part of a visiting package.</div>
+          </details>
+          <details class="reveal">
+            <summary>What if our needs change?</summary>
+            <div class="sd-faq__body">We review regularly and can increase, reduce or rearrange visits — including stepping into overnight or 24-hour care if required.</div>
+          </details>
+          <details class="reveal">
+            <summary>Is hourly care regulated?</summary>
+            <div class="sd-faq__body">Yes. All Caretaz visiting care is delivered under our CQC registration with trained, vetted carers.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-section" aria-labelledby="related-heading">
+      <div class="container">
+        <div class="sd-head reveal">
+          <p class="eyebrow">Explore further</p>
+          <h2 id="related-heading">Related care pathways</h2>
+          <p>Many families combine services as needs evolve.</p>
+        </div>
+        <div class="sd-related">
+          <a class="reveal" href="{{ route('services.show', 'overnight-care') }}">
+            <div class="sd-related__media"><img src="{{ asset('assets/images/care-evening-comfort.jpg') }}" alt="Overnight Care" width="640" height="360" loading="lazy"></div>
+            <div class="sd-related__body">
+              <span class="sd-related__cat">Visiting</span>
+              <h3>Overnight Care</h3>
+            </div>
+          </a>
+          <a class="reveal" href="{{ route('services.show', 'urgent-care') }}">
+            <div class="sd-related__media"><img src="{{ asset('assets/images/care-stand-assist.jpg') }}" alt="Urgent Care" width="640" height="360" loading="lazy"></div>
+            <div class="sd-related__body">
+              <span class="sd-related__cat">Rapid</span>
+              <h3>Urgent Care</h3>
+            </div>
+          </a>
+          <a class="reveal" href="{{ route('services.show', 'companionship-care') }}">
+            <div class="sd-related__media"><img src="{{ asset('assets/images/care-garden-outdoors.jpg') }}" alt="Companionship Care" width="640" height="360" loading="lazy"></div>
+            <div class="sd-related__body">
+              <span class="sd-related__cat">Wellbeing</span>
+              <h3>Companionship Care</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-section sd-section--fog">
+      <div class="container">
+        <div class="cqc-banner reveal-zoom">
+          <img src="{{ asset('assets/images/cqc.png') }}" alt="Care Quality Commission">
+          <div>
+            <h3>Fully Regulated by The Care Quality Commission (CQC)</h3>
+            <p>Caretaz Healthcare is registered with and regulated by the CQC, the independent body overseeing health and social care in England, with our practices routinely assessed against national standards.</p>
+            <p>We're also proudly registered with the ICO, reflecting our commitment to protecting your personal information.</p>
+          </div>
+          <div class="badge-row"><img src="{{ asset('assets/images/ico.png') }}" alt="ICO registered"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-section">
+      <div class="container">
+        <div class="sd-finale reveal">
+          <div>
+            <p class="eyebrow" style="color:var(--teal);">Ready when you are</p>
+            <h2>Ready for visiting care that fits?</h2>
+            <p>Tell us what a typical week looks like — we’ll propose a clear hourly package that protects independence at home.</p>
+            <div class="btn-row">
+              <a class="btn btn--teal" href="{{ route('appointment') }}">Make an Appointment</a>
+              <a class="btn btn--outline" href="tel:03330344121">Call 0333 034 4121</a>
+            </div>
+          </div>
+          <div class="sd-finale__media">
+            <img src="{{ asset('assets/images/care-garden-outdoors.jpg') }}" alt="Caretaz caregiver" width="560" height="360" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--mist" id="appointment">
+      <div class="container appoint-grid">
+        <div class="reveal">
+          <p class="eyebrow">Make appointment</p>
+          <h2>Book an assessment</h2>
+          <p>Share a few details and we’ll arrange a conversation as soon as possible. For urgent needs, please telephone.</p>
+          <p><strong>Phone:</strong> <a href="tel:03330344121">0333 034 4121</a><br>
+             <strong>Email:</strong> <a href="mailto:info@caretazhealthcare.co.uk">info@caretazhealthcare.co.uk</a><br>
+             <strong>Address:</strong> Suite B/105, Blenheim Court, 86-88 Mansfield Road, Nottingham NG1 3HD</p>
+        </div>
+        <form class="form-card reveal" data-appointment-form>
+          <div class="form-grid">
+            <div class="form-field"><label for="name">Name</label><input id="name" name="name" required autocomplete="name"></div>
+            <div class="form-field"><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+            <div class="form-field"><label for="phone">Phone</label><input id="phone" name="phone" required autocomplete="tel"></div>
+            <div class="form-field"><label for="service">Select Services</label>
+              <select id="service" name="service" required>
+                <option>Urgent Care</option>
+                <option selected>Hourly Care</option>
+                <option>Overnight Care</option>
+                <option>24-Hour Care</option>
+                <option>Dementia Care</option>
+                <option>Parkinson's Care</option>
+                <option>Stroke Care</option>
+                <option>Cancer Care</option>
+                <option>Palliative / End-of-Life Care</option>
+                <option>Supported Living</option>
+                <option>Live-In Care For Couples</option>
+                <option>Hospital to Home Care</option>
+                <option>Companionship Care</option>
+                <option>Carer Respite</option>
+                <option>Holiday Companionship</option>
+                <option>Housekeeping Services</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-field form-field--full"><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell us a little about the support you need…"></textarea></div>
+          </div>
+          <button class="btn btn--teal" type="submit" style="margin-top:.75rem;">Make Appointment</button>
+          <p class="form-note">For urgent needs, please telephone 0333 034 4121.</p>
+        </form>
+      </div>
+    </section>
+</main>
+@endsection
+
+@push('scripts')
+  <script src="{{ versioned_asset('js/service-detail.js') }}"></script>
+@endpush

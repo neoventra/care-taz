@@ -1,0 +1,327 @@
+@extends('layouts.app')
+
+@section('title', 'Live-In Care For Couples in Nottingham | Stay Together at Home | Caretaz Healthcare')
+@section('description', 'Live-in care for couples in Nottingham — one coordinated care plan so partners stay together at home with dual support, shared routines and CQC-regulated carers.')
+@section('body_class', 'sd')
+@push('styles')
+  <link rel="stylesheet" href="{{ versioned_asset('css/service-detail.css') }}">
+@endpush
+
+@section('content')
+<main>
+<section class="sd-hero" aria-labelledby="sd-hero-heading">
+      <div class="sd-hero__bg" style="background-image:url('../assets/images/care-garden-outdoors.jpg')" aria-hidden="true"></div>
+      <div class="sd-hero__inner">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="{{ route('home') }}">Home</a> <span>/</span>
+          <a href="{{ route('home') }}">Services</a> <span>/</span>
+          <span>Live-In Care For Couples</span>
+        </nav>
+        <p class="sd-brand">Caretaz Healthcare · Couples live-in support</p>
+        <h1 id="sd-hero-heading">Stay together at home — with care for <em>both</em> of you.</h1>
+        <p class="sd-hero__lead">Live-in style support across Nottingham so couples keep their shared life, routines and dignity — with one coordinated plan for two people, not two separate homes.</p>
+        <div class="btn-row">
+          <a class="btn btn--teal" href="#appointment">Book Assessment</a>
+          <a class="btn btn--outline" href="tel:03330344121">Call 0333 034 4121</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-trust">
+      <div class="container">
+        <div class="sd-trust__grid">
+          <div class="sd-trust__card reveal">
+            <strong>Stay together</strong>
+            <span class="sd-trust__label">Your shared home</span>
+          </div>
+          <div class="sd-trust__card reveal">
+            <strong>Dual support</strong>
+            <span class="sd-trust__label">One plan for two</span>
+          </div>
+          <div class="sd-trust__card reveal">
+            <strong>CQC</strong>
+            <span class="sd-trust__label">Fully regulated</span>
+          </div>
+          <div class="sd-trust__card reveal">
+            <strong>Nottingham</strong>
+            <span class="sd-trust__label">City &amp; surrounding areas</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-section" aria-labelledby="about-service">
+      <div class="container">
+        <div class="sd-split">
+          <div class="sd-split__media reveal-left">
+            <img src="{{ asset('assets/images/care-garden-outdoors.jpg') }}" alt="Live-in care for couples at home with Caretaz Healthcare" width="720" height="540" loading="eager">
+            <div class="sd-split__float">
+              <strong>Together</strong>
+              <span>One home, dual support</span>
+            </div>
+          </div>
+          <div class="sd-split__copy reveal-right">
+            <p class="eyebrow">About this service</p>
+            <h2 id="about-service">One care plan for two lives shared.</h2>
+            <p>Live-in care for couples from Caretaz Healthcare is for partners who want to remain in their shared home — not be separated into different care homes when needs increase for one or both of you.</p>
+            <p>We build a single coordinated plan covering personal care for both, shared morning and evening routines, household help, night presence and medication prompts. Rotating or live-in carers provide continuous support that respects your life as a couple.</p>
+            <p>Whether one partner needs more hands-on help and the other needs prompting and company, support is balanced so neither person feels overlooked — and your home still feels like yours.</p>
+            <div class="sd-pill-row">
+              <span class="sd-pill"><i></i> Dual personal care</span>
+              <span class="sd-pill"><i></i> Shared routines</span>
+              <span class="sd-pill"><i></i> Night presence</span>
+              <span class="sd-pill"><i></i> Couples companionship</span>
+            </div>
+            <div class="btn-row">
+              <a class="btn btn--navy" href="{{ route('appointment') }}">Make Appointment</a>
+              <a class="btn btn--outline-teal" href="{{ route('home') }}">All Services</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-section sd-section--fog" aria-labelledby="includes-heading">
+      <div class="container">
+        <div class="sd-head reveal">
+          <p class="eyebrow">What’s included</p>
+          <h2 id="includes-heading">Support shaped around life as a couple</h2>
+          <p>Every package is personalised after assessment — these are the building blocks couples ask for most.</p>
+        </div>
+        <div class="sd-includes">
+          <article class="sd-include reveal">
+            <span class="sd-include__label">Daily living</span>
+            <h3>Personal care for both</h3>
+            <p>Washing, dressing and toileting support tailored to each partner’s pace and preference.</p>
+          </article>
+          <article class="sd-include reveal">
+            <span class="sd-include__label">Rhythm</span>
+            <h3>Shared routines</h3>
+            <p>Mornings, mealtimes and evenings planned so the household still moves together.</p>
+          </article>
+          <article class="sd-include reveal">
+            <span class="sd-include__label">Home</span>
+            <h3>Household help</h3>
+            <p>Light cleaning, laundry and kitchen tasks that keep the shared home manageable.</p>
+          </article>
+          <article class="sd-include reveal">
+            <span class="sd-include__label">Night</span>
+            <h3>Night presence</h3>
+            <p>Overnight support so both partners feel safe if help is needed after dark.</p>
+          </article>
+          <article class="sd-include reveal">
+            <span class="sd-include__label">Health</span>
+            <h3>Medication for both</h3>
+            <p>Prompts and records aligned to each person’s pharmacy plan, without confusion.</p>
+          </article>
+          <article class="sd-include reveal">
+            <span class="sd-include__label">Connection</span>
+            <h3>Companionship as a couple</h3>
+            <p>Conversation and reassurance that honour your relationship — not two isolated care slots.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-section sd-section--ink" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="sd-head reveal">
+          <p class="eyebrow" style="color:var(--teal);">Why families choose this</p>
+          <h2 id="why-heading">Impact you can feel as a couple</h2>
+          <p>More than a service label — a standard of how we show up for two people at once.</p>
+        </div>
+        <div class="sd-values">
+          <article class="sd-value reveal">
+            <div class="sd-value__num">01</div>
+            <h3>Not separated</h3>
+            <p>Stay in your shared home instead of being split into different care homes.</p>
+          </article>
+          <article class="sd-value reveal">
+            <div class="sd-value__num">02</div>
+            <h3>Coordinated plans</h3>
+            <p>One joined-up schedule that balances different needs without chaos or conflict.</p>
+          </article>
+          <article class="sd-value reveal">
+            <div class="sd-value__num">03</div>
+            <h3>Dignity for both</h3>
+            <p>Each partner is seen as a person — support never favours one at the other’s expense.</p>
+          </article>
+          <article class="sd-value reveal">
+            <div class="sd-value__num">04</div>
+            <h3>Regulated care</h3>
+            <p>CQC-registered delivery with trained, vetted carers you can trust in your home.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-section" aria-labelledby="process-heading">
+      <div class="container">
+        <div class="sd-head reveal">
+          <p class="eyebrow">How it starts</p>
+          <h2 id="process-heading">Three clear steps to care</h2>
+          <p>No jargon. No pressure — just a path that feels human.</p>
+        </div>
+        <div class="sd-process">
+          <article class="sd-step reveal">
+            <div class="sd-step__num">01</div>
+            <h3>Make contact</h3>
+            <p>Call, email or book online. Tell us about both partners’ needs and how soon support should start.</p>
+          </article>
+          <article class="sd-step reveal">
+            <div class="sd-step__num">02</div>
+            <h3>Assessment</h3>
+            <p>We meet at home to understand each person’s routines, risks and what life as a couple looks like.</p>
+          </article>
+          <article class="sd-step reveal">
+            <div class="sd-step__num">03</div>
+            <h3>Care begins</h3>
+            <p>Agree the dual plan, meet your carers, and start live-in style support that keeps you together.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-section sd-section--fog" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="sd-head reveal">
+          <p class="eyebrow">Good to know</p>
+          <h2 id="faq-heading">Questions families ask first</h2>
+          <p>Straight answers before you book.</p>
+        </div>
+        <div class="sd-faq">
+          <details class="reveal">
+            <summary>Can both partners receive live-in style support under one plan?</summary>
+            <div class="sd-faq__body">Yes. We design one coordinated care plan that covers both people — personal care, routines, medication prompts and companionship — so support feels joined-up rather than two separate arrangements colliding in the same home.</div>
+          </details>
+          <details class="reveal">
+            <summary>Will we have to move into a care home separately?</summary>
+            <div class="sd-faq__body">No. Live-in care for couples is designed so you stay in your shared home together. Rotating or live-in carers provide dual support without splitting partners into different care homes.</div>
+          </details>
+          <details class="reveal">
+            <summary>How do carers support different needs for each partner?</summary>
+            <div class="sd-faq__body">Assessment maps each person's needs, risks and preferences, then builds a shared schedule. One partner may need more personal care while the other needs prompting or company — the plan balances both with dignity.</div>
+          </details>
+          <details class="reveal">
+            <summary>Is live-in care for couples CQC-regulated?</summary>
+            <div class="sd-faq__body">Yes. All Caretaz live-in and dual-support packages are delivered under our Care Quality Commission registration with trained, vetted carers.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-section" aria-labelledby="related-heading">
+      <div class="container">
+        <div class="sd-head reveal">
+          <p class="eyebrow">Explore further</p>
+          <h2 id="related-heading">Related care pathways</h2>
+          <p>Many families combine services as needs evolve.</p>
+        </div>
+        <div class="sd-related">
+          <a class="reveal" href="{{ route('services.show', '24-hour-care') }}">
+            <div class="sd-related__media"><img src="{{ asset('assets/images/care-meal-support.jpg') }}" alt="24-Hour Care" width="640" height="360" loading="lazy"></div>
+            <div class="sd-related__body">
+              <span class="sd-related__cat">Continuous</span>
+              <h3>24-Hour Care</h3>
+            </div>
+          </a>
+          <a class="reveal" href="{{ route('services.show', 'hourly-care') }}">
+            <div class="sd-related__media"><img src="{{ asset('assets/images/care-mobility-support.jpg') }}" alt="Hourly Care" width="640" height="360" loading="lazy"></div>
+            <div class="sd-related__body">
+              <span class="sd-related__cat">Visiting</span>
+              <h3>Hourly Care</h3>
+            </div>
+          </a>
+          <a class="reveal" href="{{ route('services.show', 'carer-respite') }}">
+            <div class="sd-related__media"><img src="{{ asset('assets/images/care-banner-companionship.jpg') }}" alt="Carer Respite Break Cover" width="640" height="360" loading="lazy"></div>
+            <div class="sd-related__body">
+              <span class="sd-related__cat">Relief</span>
+              <h3>Carer Respite</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-section sd-section--fog">
+      <div class="container">
+        <div class="cqc-banner reveal-zoom">
+          <img src="{{ asset('assets/images/cqc.png') }}" alt="Care Quality Commission">
+          <div>
+            <h3>Fully Regulated by The Care Quality Commission (CQC)</h3>
+            <p>Caretaz Healthcare is registered with and regulated by the CQC, the independent body overseeing health and social care in England, with our practices routinely assessed against national standards.</p>
+            <p>We're also proudly registered with the ICO, reflecting our commitment to protecting your personal information.</p>
+          </div>
+          <div class="badge-row"><img src="{{ asset('assets/images/ico.png') }}" alt="ICO registered"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-section">
+      <div class="container">
+        <div class="sd-finale reveal">
+          <div>
+            <p class="eyebrow" style="color:var(--teal);">Ready when you are</p>
+            <h2>Ready for care that keeps you together?</h2>
+            <p>Tell us about both partners’ needs — we’ll propose a clear live-in style package that protects your shared home and dignity.</p>
+            <div class="btn-row">
+              <a class="btn btn--teal" href="{{ route('appointment') }}">Make an Appointment</a>
+              <a class="btn btn--outline" href="tel:03330344121">Call 0333 034 4121</a>
+            </div>
+          </div>
+          <div class="sd-finale__media">
+            <img src="{{ asset('assets/images/care-meal-support.jpg') }}" alt="Live-in care for couples with Caretaz Healthcare" width="560" height="360" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--mist" id="appointment">
+      <div class="container appoint-grid">
+        <div class="reveal">
+          <p class="eyebrow">Make appointment</p>
+          <h2>Book an assessment</h2>
+          <p>Share a few details and we’ll arrange a conversation as soon as possible. For urgent needs, please telephone.</p>
+          <p><strong>Phone:</strong> <a href="tel:03330344121">0333 034 4121</a><br>
+             <strong>Email:</strong> <a href="mailto:info@caretazhealthcare.co.uk">info@caretazhealthcare.co.uk</a><br>
+             <strong>Address:</strong> Suite B/105, Blenheim Court, 86-88 Mansfield Road, Nottingham NG1 3HD</p>
+        </div>
+        <form class="form-card reveal" data-appointment-form>
+          <div class="form-grid">
+            <div class="form-field"><label for="name">Name</label><input id="name" name="name" required autocomplete="name"></div>
+            <div class="form-field"><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+            <div class="form-field"><label for="phone">Phone</label><input id="phone" name="phone" required autocomplete="tel"></div>
+            <div class="form-field"><label for="service">Select Services</label>
+              <select id="service" name="service" required>
+                <option>Urgent Care</option>
+                <option>Hourly Care</option>
+                <option>Overnight Care</option>
+                <option>24-Hour Care</option>
+                <option>Dementia Care</option>
+                <option>Parkinson's Care</option>
+                <option>Stroke Care</option>
+                <option>Cancer Care</option>
+                <option>Palliative / End-of-Life Care</option>
+                <option>Supported Living</option>
+                <option selected>Live-In Care For Couples</option>
+                <option>Hospital to Home Care</option>
+                <option>Companionship Care</option>
+                <option>Carer Respite</option>
+                <option>Holiday Companionship</option>
+                <option>Housekeeping Services</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-field form-field--full"><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell us a little about support needed for both of you…"></textarea></div>
+          </div>
+          <button class="btn btn--teal" type="submit" style="margin-top:.75rem;">Make Appointment</button>
+          <p class="form-note">For urgent needs, please telephone 0333 034 4121.</p>
+        </form>
+      </div>
+    </section>
+</main>
+@endsection
+
+@push('scripts')
+  <script src="{{ versioned_asset('js/service-detail.js') }}"></script>
+@endpush

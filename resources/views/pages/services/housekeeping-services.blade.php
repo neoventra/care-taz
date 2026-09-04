@@ -1,0 +1,327 @@
+@extends('layouts.app')
+
+@section('title', 'Housekeeping Services Nottingham | Domestic Help | Caretaz Healthcare')
+@section('description', 'Housekeeping Services in Nottingham from Caretaz Healthcare — reliable domestic help with cleaning, laundry, shopping and light organisation so the home stays manageable.')
+@section('body_class', 'sd')
+@push('styles')
+  <link rel="stylesheet" href="{{ versioned_asset('css/service-detail.css') }}">
+@endpush
+
+@section('content')
+<main>
+<section class="sd-hero" aria-labelledby="sd-hero-heading">
+      <div class="sd-hero__bg" style="background-image:url('../assets/images/service-cleaning.jpg')" aria-hidden="true"></div>
+      <div class="sd-hero__inner">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="{{ route('home') }}">Home</a> <span>/</span>
+          <a href="{{ route('home') }}">Services</a> <span>/</span>
+          <span>Housekeeping Services</span>
+        </nav>
+        <p class="sd-brand">Caretaz Healthcare · Domestic Help at Home</p>
+        <h1 id="sd-hero-heading">A home that stays <em>manageable</em>.</h1>
+        <p class="sd-hero__lead">Housekeeping services across Nottingham — cleaning, laundry and shopping that free energy for living, delivered by a reliable CQC-registered Caretaz team.</p>
+        <div class="btn-row">
+          <a class="btn btn--teal" href="#appointment">Book Assessment</a>
+          <a class="btn btn--outline" href="tel:03330344121">Call 0333 034 4121</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-trust">
+      <div class="container">
+        <div class="sd-trust__grid">
+          <div class="sd-trust__card reveal">
+            <strong>Domestic help</strong>
+            <span class="sd-trust__label">Cleaning, laundry, shopping</span>
+          </div>
+          <div class="sd-trust__card reveal">
+            <strong>Reliable visits</strong>
+            <span class="sd-trust__label">Schedules you can plan around</span>
+          </div>
+          <div class="sd-trust__card reveal">
+            <strong>Nottingham</strong>
+            <span class="sd-trust__label">City &amp; surrounding areas</span>
+          </div>
+          <div class="sd-trust__card reveal">
+            <strong>CQC provider</strong>
+            <span class="sd-trust__label">Under Caretaz Healthcare</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-section" aria-labelledby="about-service">
+      <div class="container">
+        <div class="sd-split">
+          <div class="sd-split__media reveal-left">
+            <img src="{{ asset('assets/images/service-cleaning.jpg') }}" alt="Housekeeping Services domestic help with Caretaz Healthcare" width="720" height="540" loading="eager">
+            <div class="sd-split__float">
+              <strong>Organised</strong>
+              <span>Clean, calm living space</span>
+            </div>
+          </div>
+          <div class="sd-split__copy reveal-right">
+            <p class="eyebrow">About this service</p>
+            <h2 id="about-service">Essential domestic help — nothing more, nothing less.</h2>
+            <p>Housekeeping services from Caretaz Healthcare focus on the practical work of keeping a home clean and organised. Cleaning, laundry and shopping take energy — our visits return that energy to living, resting and spending time with people who matter.</p>
+            <p>This pathway is domestic help, not personal care. If washing, dressing or medication support is also needed, we can pair housekeeping with care visits under the same Nottingham provider — so homes and people both stay well supported.</p>
+            <p>Families choose us for reliable schedules, DBS-checked team members and the reassurance of a CQC-registered organisation behind every visit.</p>
+            <div class="sd-pill-row">
+              <span class="sd-pill"><i></i> Cleaning</span>
+              <span class="sd-pill"><i></i> Laundry &amp; ironing</span>
+              <span class="sd-pill"><i></i> Shopping &amp; errands</span>
+              <span class="sd-pill"><i></i> Light organisation</span>
+            </div>
+            <div class="btn-row">
+              <a class="btn btn--navy" href="{{ route('appointment') }}">Make Appointment</a>
+              <a class="btn btn--outline-teal" href="{{ route('home') }}">All Services</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-section sd-section--fog" aria-labelledby="includes-heading">
+      <div class="container">
+        <div class="sd-head reveal">
+          <p class="eyebrow">What’s included</p>
+          <h2 id="includes-heading">Support shaped around the home</h2>
+          <p>Every package is personalised after assessment — these are the domestic building blocks families ask for most.</p>
+        </div>
+        <div class="sd-includes">
+          <article class="sd-include reveal">
+            <span class="sd-include__label">Home</span>
+            <h3>Cleaning</h3>
+            <p>Regular cleaning that keeps living spaces fresh, tidy and easier to enjoy.</p>
+          </article>
+          <article class="sd-include reveal">
+            <span class="sd-include__label">Laundry</span>
+            <h3>Laundry &amp; ironing</h3>
+            <p>Washing, drying and ironing so clothes and bedding stay manageable week to week.</p>
+          </article>
+          <article class="sd-include reveal">
+            <span class="sd-include__label">Errands</span>
+            <h3>Shopping &amp; errands</h3>
+            <p>Accompanied or supported shopping trips and practical errands that keep the fridge stocked.</p>
+          </article>
+          <article class="sd-include reveal">
+            <span class="sd-include__label">Kitchen</span>
+            <h3>Kitchen tidy</h3>
+            <p>Clearing, wiping and light kitchen organisation so mealtimes feel simpler.</p>
+          </article>
+          <article class="sd-include reveal">
+            <span class="sd-include__label">Bedroom</span>
+            <h3>Bed changing</h3>
+            <p>Fresh bedding changes that keep rest spaces comfortable and clean.</p>
+          </article>
+          <article class="sd-include reveal">
+            <span class="sd-include__label">Order</span>
+            <h3>Light organisation</h3>
+            <p>Gentle sorting and tidying that reduces clutter without disrupting belongings.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-section sd-section--ink" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="sd-head reveal">
+          <p class="eyebrow" style="color:var(--teal);">Why families choose this</p>
+          <h2 id="why-heading">Impact you can feel at home</h2>
+          <p>More than a service label — a standard of how we show up.</p>
+        </div>
+        <div class="sd-values">
+          <article class="sd-value reveal">
+            <div class="sd-value__num">01</div>
+            <h3>Reliable schedule</h3>
+            <p>Visits you can plan around — weekly, fortnightly or as agreed.</p>
+          </article>
+          <article class="sd-value reveal">
+            <div class="sd-value__num">02</div>
+            <h3>DBS-checked team</h3>
+            <p>Vetted Caretaz staff with the same recruitment standards as our care pathways.</p>
+          </article>
+          <article class="sd-value reveal">
+            <div class="sd-value__num">03</div>
+            <h3>Pair with care visits</h3>
+            <p>Add personal care or companionship under one provider when needed.</p>
+          </article>
+          <article class="sd-value reveal">
+            <div class="sd-value__num">04</div>
+            <h3>Local Nottingham</h3>
+            <p>A nearby team who understand the homes and routines of the city and surrounds.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-section" aria-labelledby="process-heading">
+      <div class="container">
+        <div class="sd-head reveal">
+          <p class="eyebrow">How it starts</p>
+          <h2 id="process-heading">Three clear steps to care</h2>
+          <p>No jargon. No pressure — just a path that feels human.</p>
+        </div>
+        <div class="sd-process">
+          <article class="sd-step reveal">
+            <div class="sd-step__num">01</div>
+            <h3>Make contact</h3>
+            <p>Call, email or book online. Tell us what you need and how soon.</p>
+          </article>
+          <article class="sd-step reveal">
+            <div class="sd-step__num">02</div>
+            <h3>Assessment</h3>
+            <p>We meet at home (or virtually) to understand the property, priorities and schedule.</p>
+          </article>
+          <article class="sd-step reveal">
+            <div class="sd-step__num">03</div>
+            <h3>Care begins</h3>
+            <p>Agree the plan, meet your team, and start domestic visits that feel settled.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-section sd-section--fog" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="sd-head reveal">
+          <p class="eyebrow">Good to know</p>
+          <h2 id="faq-heading">Questions families ask first</h2>
+          <p>Straight answers before you book.</p>
+        </div>
+        <div class="sd-faq">
+          <details class="reveal">
+            <summary>Is housekeeping the same as personal care?</summary>
+            <div class="sd-faq__body">No. Housekeeping focuses on domestic tasks — cleaning, laundry, shopping and organisation. Personal care is a separate pathway; we can pair both under the same CQC-registered provider if needed.</div>
+          </details>
+          <details class="reveal">
+            <summary>What domestic tasks can visits include?</summary>
+            <div class="sd-faq__body">General cleaning, laundry and ironing, shopping or errands, kitchen tidy, changing beds and light organisation — tailored after assessment to what keeps the home manageable.</div>
+          </details>
+          <details class="reveal">
+            <summary>How often can housekeeping visits be scheduled?</summary>
+            <div class="sd-faq__body">Weekly, fortnightly or more frequent slots depending on the size of the home and what needs doing. We agree a reliable schedule you can plan around.</div>
+          </details>
+          <details class="reveal">
+            <summary>Are housekeeping staff DBS-checked?</summary>
+            <div class="sd-faq__body">Yes. Visits are delivered by vetted Caretaz team members under our CQC-registered Nottingham service — the same standards of recruitment and supervision as our care pathways.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-section" aria-labelledby="related-heading">
+      <div class="container">
+        <div class="sd-head reveal">
+          <p class="eyebrow">Explore further</p>
+          <h2 id="related-heading">Related care pathways</h2>
+          <p>Many families combine services as needs evolve.</p>
+        </div>
+        <div class="sd-related">
+          <a class="reveal" href="{{ route('services.show', 'hourly-care') }}">
+            <div class="sd-related__media"><img src="{{ asset('assets/images/care-meal-support.jpg') }}" alt="Hourly Care" width="640" height="360" loading="lazy"></div>
+            <div class="sd-related__body">
+              <span class="sd-related__cat">Visiting</span>
+              <h3>Hourly Care</h3>
+            </div>
+          </a>
+          <a class="reveal" href="{{ route('services.show', 'companionship-care') }}">
+            <div class="sd-related__media"><img src="{{ asset('assets/images/care-garden-outdoors.jpg') }}" alt="Companionship Care" width="640" height="360" loading="lazy"></div>
+            <div class="sd-related__body">
+              <span class="sd-related__cat">Wellbeing</span>
+              <h3>Companionship Care</h3>
+            </div>
+          </a>
+          <a class="reveal" href="{{ route('services.show', 'carer-respite') }}">
+            <div class="sd-related__media"><img src="{{ asset('assets/images/care-tablet-together.jpg') }}" alt="Carer Respite" width="640" height="360" loading="lazy"></div>
+            <div class="sd-related__body">
+              <span class="sd-related__cat">Family relief</span>
+              <h3>Carer Respite</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-section sd-section--fog">
+      <div class="container">
+        <div class="cqc-banner reveal-zoom">
+          <img src="{{ asset('assets/images/cqc.png') }}" alt="Care Quality Commission">
+          <div>
+            <h3>Fully Regulated by The Care Quality Commission (CQC)</h3>
+            <p>Caretaz Healthcare is registered with and regulated by the CQC, the independent body overseeing health and social care in England, with our practices routinely assessed against national standards.</p>
+            <p>We're also proudly registered with the ICO, reflecting our commitment to protecting your personal information.</p>
+          </div>
+          <div class="badge-row"><img src="{{ asset('assets/images/ico.png') }}" alt="ICO registered"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sd-section">
+      <div class="container">
+        <div class="sd-finale reveal">
+          <div>
+            <p class="eyebrow" style="color:var(--teal);">Ready when you are</p>
+            <h2>Ready for a home that feels lighter?</h2>
+            <p>Tell us what needs doing each week — we’ll propose clear housekeeping visits that keep the home organised without the strain.</p>
+            <div class="btn-row">
+              <a class="btn btn--teal" href="{{ route('appointment') }}">Make an Appointment</a>
+              <a class="btn btn--outline" href="tel:03330344121">Call 0333 034 4121</a>
+            </div>
+          </div>
+          <div class="sd-finale__media">
+            <img src="{{ asset('assets/images/care-meal-support.jpg') }}" alt="Housekeeping Services in Nottingham" width="560" height="360" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--mist" id="appointment">
+      <div class="container appoint-grid">
+        <div class="reveal">
+          <p class="eyebrow">Make appointment</p>
+          <h2>Book an assessment</h2>
+          <p>Share a few details and we’ll arrange a conversation as soon as possible. For urgent needs, please telephone.</p>
+          <p><strong>Phone:</strong> <a href="tel:03330344121">0333 034 4121</a><br>
+             <strong>Email:</strong> <a href="mailto:info@caretazhealthcare.co.uk">info@caretazhealthcare.co.uk</a><br>
+             <strong>Address:</strong> Suite B/105, Blenheim Court, 86-88 Mansfield Road, Nottingham NG1 3HD</p>
+        </div>
+        <form class="form-card reveal" data-appointment-form>
+          <div class="form-grid">
+            <div class="form-field"><label for="name">Name</label><input id="name" name="name" required autocomplete="name"></div>
+            <div class="form-field"><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+            <div class="form-field"><label for="phone">Phone</label><input id="phone" name="phone" required autocomplete="tel"></div>
+            <div class="form-field"><label for="service">Select Services</label>
+              <select id="service" name="service" required>
+                <option>Urgent Care</option>
+                <option>Hourly Care</option>
+                <option>Overnight Care</option>
+                <option>24-Hour Care</option>
+                <option>Dementia Care</option>
+                <option>Parkinson's Care</option>
+                <option>Stroke Care</option>
+                <option>Cancer Care</option>
+                <option>Palliative / End-of-Life Care</option>
+                <option>Supported Living</option>
+                <option>Live-In Care For Couples</option>
+                <option>Hospital to Home Care</option>
+                <option>Companionship Care</option>
+                <option>Carer Respite</option>
+                <option>Holiday Companionship</option>
+                <option selected>Housekeeping Services</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-field form-field--full"><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell us a little about the support you need…"></textarea></div>
+          </div>
+          <button class="btn btn--teal" type="submit" style="margin-top:.75rem;">Make Appointment</button>
+          <p class="form-note">For urgent needs, please telephone 0333 034 4121.</p>
+        </form>
+      </div>
+    </section>
+</main>
+@endsection
+
+@push('scripts')
+  <script src="{{ versioned_asset('js/service-detail.js') }}"></script>
+@endpush
