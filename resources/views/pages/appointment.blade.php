@@ -53,32 +53,45 @@
             </ol>
             <p style="margin-top:1.1rem;font-size:0.92rem;color:var(--muted);"><strong>Office:</strong> Suite B/105, Blenheim Court, 86-88 Mansfield Road, Nottingham NG1 3HD</p>
           </div>
-          <form class="book-form reveal-right" data-appointment-form>
+          <form class="book-form reveal-right" id="appointmentForm" action="{{ route('appointment.store') }}" method="post">
+            @csrf
             <div class="book-form__glow" aria-hidden="true"></div>
             <p class="eyebrow" style="margin-bottom:0.85rem;">Booking form</p>
             <div class="form-grid">
-              <div class="form-field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required placeholder="Full name"></div>
-              <div class="form-field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="name@example.com"></div>
-              <div class="form-field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="Best number to reach you"></div>
+              <div class="form-field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required maxlength="255" placeholder="Full name"></div>
+              <div class="form-field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="255" placeholder="name@example.com"></div>
+              <div class="form-field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" required maxlength="50" placeholder="Best number to reach you"></div>
               <div class="form-field"><label for="service">Care you're exploring</label>
                 <select id="service" name="service" required>
                   <option value="">Select an option…</option>
-                  <option>Hourly / visiting care</option>
-                  <option>Overnight care</option>
-                  <option>24-hour / live-in care</option>
-                  <option>Urgent or short-notice care</option>
-                  <option>Dementia care</option>
-                  <option>Palliative / end-of-life care</option>
-                  <option>Parkinson's support</option>
-                  <option>Supported living</option>
-                  <option>Not sure yet — I'd like advice</option>
-                  <option>Other</option>
+                  <option value="Hourly / visiting care">Hourly / visiting care</option>
+                  <option value="Overnight care">Overnight care</option>
+                  <option value="24-hour / live-in care">24-hour / live-in care</option>
+                  <option value="Urgent or short-notice care">Urgent or short-notice care</option>
+                  <option value="Dementia care">Dementia care</option>
+                  <option value="Palliative / end-of-life care">Palliative / end-of-life care</option>
+                  <option value="Parkinson's support">Parkinson's support</option>
+                  <option value="Supported living">Supported living</option>
+                  <option value="Not sure yet — I'd like advice">Not sure yet — I'd like advice</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
-              <div class="form-field form-field--full"><label for="message">Tell us a little about the situation</label><textarea id="message" name="message" rows="4" placeholder="Who needs support, what a typical day looks like, and anything urgent we should know…"></textarea></div>
+              <div class="form-field form-field--full"><label for="message">Tell us a little about the situation</label><textarea id="message" name="message" rows="4" required maxlength="800" placeholder="Who needs support, what a typical day looks like, and anything urgent we should know…"></textarea></div>
+              <div class="form-field form-field--full captcha-field">
+                <label for="captcha">Security check</label>
+                <div class="captcha-row">
+                  <img src="{{ captcha_src() }}" alt="Captcha" id="captchaImage" class="captcha-image" width="260" height="52">
+                  <button type="button" class="captcha-refresh" id="captchaRefresh" aria-label="Reload captcha">↻</button>
+                </div>
+                <input id="captcha" name="captcha" type="text" required autocomplete="off" inputmode="numeric" placeholder="Type the answer">
+              </div>
             </div>
-            <button class="btn btn--teal" type="submit">Request assessment</button>
+            <button class="btn btn--teal" type="submit" id="appointmentSubmit">Request assessment</button>
             <p class="form-note">This is a request, not a commitment. For urgent cover, please call 0333 034 4121 directly.</p>
+            <div class="success-msg" id="successMsg" hidden>
+              <strong>Request received.</strong>
+              <span>Thank you — we have received your assessment request and will be in touch shortly.</span>
+            </div>
           </form>
         </div>
       </div>
@@ -222,3 +235,68 @@
     </section>
 </main>
 @endsection
+
+@push('scripts')
+<script>
+(function () {
+  const form = document.getElementById('appointmentForm');
+  if (!form) return;
+
+  const successMsg = document.getElementById('successMsg');
+  const submitBtn = document.getElementById('appointmentSubmit');
+  const captchaImage = document.getElementById('captchaImage');
+  const captchaRefresh = document.getElementById('captchaRefresh');
+  const captchaSrcBase = '{{ url("captcha/default") }}';
+
+  function refreshCaptcha() {
+    captchaImage.src = captchaSrcBase + '?' + Date.now();
+    const captchaInput = document.getElementById('captcha');
+    if (captchaInput) captchaInput.value = '';
+  }
+
+  captchaRefresh.addEventListener('click', refreshCaptcha);
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    submitBtn.disabled = true;
+    fetch(form.action, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+        'X-Requested-With': 'XMLHttpRequest'
+      },
+      body: new FormData(form)
+    })
+      .then(function (res) {
+        return res.json().then(function (data) { return { ok: res.ok, data: data }; });
+      })
+      .then(function (result) {
+        refreshCaptcha();
+        if (!result.ok) {
+          var firstError = result.data.errors
+            ? Object.values(result.data.errors)[0][0]
+            : (result.data.message || 'Please check the form and try again.');
+          alert(firstError);
+          return;
+        }
+        successMsg.hidden = false;
+        form.reset();
+        successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      })
+      .catch(function () {
+        refreshCaptcha();
+        alert('Something went wrong. Please try again.');
+      })
+      .finally(function () {
+        submitBtn.disabled = false;
+      });
+  });
+})();
+</script>
+@endpush

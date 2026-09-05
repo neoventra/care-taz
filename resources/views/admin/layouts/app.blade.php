@@ -36,6 +36,10 @@
         <i class="bi bi-chat-heart"></i>
         <span>Contact Us</span>
       </a>
+      <a href="{{ route('admin.appointments.index') }}" class="{{ request()->routeIs('admin.appointments.*') ? 'is-active' : '' }}">
+        <i class="bi bi-calendar2-heart"></i>
+        <span>Appointments</span>
+      </a>
       <a href="{{ route('admin.blog.index') }}" class="{{ request()->routeIs('admin.blog.*') ? 'is-active' : '' }}">
         <i class="bi bi-newspaper"></i>
         <span>Blog</span>
