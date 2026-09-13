@@ -25,7 +25,7 @@
   @include('partials.footer')
 
   <a class="whatsapp-float"
-     href="https://wa.me/447448711361"
+     href="https://wa.me/447869706646"
      target="_blank"
      rel="noopener noreferrer"
      aria-label="Chat with Caretaz Healthcare on WhatsApp">
