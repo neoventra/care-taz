@@ -60,11 +60,11 @@
             @csrf
             <div class="book-form__glow" aria-hidden="true"></div>
             <div class="form-grid">
-              <div class="form-field"><label for="name">Name</label><input id="name" name="name" required autocomplete="name" maxlength="255"></div>
-              <div class="form-field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" required autocomplete="tel" maxlength="50"></div>
-              <div class="form-field form-field--full"><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email" maxlength="255"></div>
-              <div class="form-field form-field--full"><label for="subject">Subject</label><input id="subject" name="subject" required maxlength="255"></div>
-              <div class="form-field form-field--full"><label for="message">Message</label><textarea id="message" name="message" required maxlength="800"></textarea></div>
+              <div class="form-field"><label for="name">Name</label><input id="name" name="name" required autocomplete="name" maxlength="255" placeholder="Your full name"></div>
+              <div class="form-field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" inputmode="numeric" pattern="[0-9]+" title="Please enter numbers only" required autocomplete="tel" maxlength="15" placeholder="e.g. 07123456789"></div>
+              <div class="form-field form-field--full"><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email" maxlength="255" placeholder="you@example.com"></div>
+              <div class="form-field form-field--full"><label for="subject">Subject</label><input id="subject" name="subject" required maxlength="255" placeholder="What is your enquiry about?"></div>
+              <div class="form-field form-field--full"><label for="message">Message</label><textarea id="message" name="message" required maxlength="800" placeholder="Tell us a little about the care support you need…"></textarea></div>
               <div class="form-field form-field--full captcha-field">
                 <label for="captcha">Security check</label>
                 <div class="captcha-row">
@@ -212,14 +212,43 @@
 
   const successMsg = document.getElementById('successMsg');
   const submitBtn = document.getElementById('contactSubmit');
+  const originalLabel = submitBtn.innerHTML;
+  const phoneInput = document.getElementById('phone');
   const captchaImage = document.getElementById('captchaImage');
   const captchaRefresh = document.getElementById('captchaRefresh');
   const captchaSrcBase = '{{ url("captcha/default") }}';
+
+  function digitsOnly(value) {
+    return String(value || '').replace(/\D+/g, '');
+  }
+
+  phoneInput.addEventListener('input', function () {
+    this.value = digitsOnly(this.value);
+  });
+
+  phoneInput.addEventListener('paste', function (e) {
+    e.preventDefault();
+    var pasted = (e.clipboardData || window.clipboardData).getData('text');
+    var start = this.selectionStart;
+    var end = this.selectionEnd;
+    var next = digitsOnly(this.value.slice(0, start) + pasted + this.value.slice(end)).slice(0, this.maxLength || 15);
+    this.value = next;
+  });
 
   function refreshCaptcha() {
     captchaImage.src = captchaSrcBase + '?' + Date.now();
     const captchaInput = document.getElementById('captcha');
     if (captchaInput) captchaInput.value = '';
+  }
+
+  function setSubmitting(isSubmitting) {
+    submitBtn.disabled = isSubmitting;
+    submitBtn.setAttribute('aria-busy', isSubmitting ? 'true' : 'false');
+    if (isSubmitting) {
+      submitBtn.innerHTML = '<span class="btn-spinner" aria-hidden="true"></span><span>Sending…</span>';
+    } else {
+      submitBtn.innerHTML = originalLabel;
+    }
   }
 
   captchaRefresh.addEventListener('click', refreshCaptcha);
@@ -231,7 +260,7 @@
       return;
     }
 
-    submitBtn.disabled = true;
+    setSubmitting(true);
     fetch(form.action, {
       method: 'POST',
       headers: {
@@ -262,7 +291,7 @@
         alert('Something went wrong. Please try again.');
       })
       .finally(function () {
-        submitBtn.disabled = false;
+        setSubmitting(false);
       });
   });
 })();

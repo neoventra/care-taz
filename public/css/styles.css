@@ -121,6 +121,26 @@ p { margin: 0 0 0.75em; }
   transform: translateY(-2px);
 }
 .btn-row { display: flex; flex-wrap: wrap; gap: 0.65rem; }
+.btn:disabled {
+  opacity: 0.78;
+  cursor: not-allowed;
+  pointer-events: none;
+  transform: none;
+  box-shadow: none;
+}
+.btn-spinner {
+  display: inline-block;
+  width: 1.05em;
+  height: 1.05em;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: btn-spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+@keyframes btn-spin {
+  to { transform: rotate(360deg); }
+}
 
 /* Topbar */
 .topbar { background: var(--white); color: var(--navy); font-size: 0.86rem; border-bottom: 1px solid var(--line); }
