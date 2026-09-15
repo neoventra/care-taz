@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
             ContactEnquirySeeder::class,
             AdminUserSeeder::class,
             BlogSeeder::class,
+            MailSettingSeeder::class,
         ]);
     }
 }

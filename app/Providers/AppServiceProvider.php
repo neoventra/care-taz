@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\MailSetting;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
@@ -27,5 +28,11 @@ class AppServiceProvider extends ServiceProvider
         }
 
         Paginator::useBootstrapFive();
+
+        try {
+            MailSetting::current()?->applyToConfig();
+        } catch (\Throwable) {
+            // DB may be unavailable during install/migrate.
+        }
     }
 }

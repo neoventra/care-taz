@@ -44,6 +44,10 @@
         <i class="bi bi-newspaper"></i>
         <span>Blog</span>
       </a>
+      <a href="{{ route('admin.mail-settings.edit') }}" class="{{ request()->routeIs('admin.mail-settings.*') ? 'is-active' : '' }}">
+        <i class="bi bi-envelope-at"></i>
+        <span>Mail settings</span>
+      </a>
     </nav>
   </aside>
 

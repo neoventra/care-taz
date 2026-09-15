@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\BlogPostController;
 use App\Http\Controllers\Admin\ContactEnquiryController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\MailSettingController;
 use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
@@ -38,6 +39,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/contact-us/data', [ContactEnquiryController::class, 'data'])->name('contact-us.data');
         Route::get('/appointments', [AdminAppointmentController::class, 'index'])->name('appointments.index');
         Route::get('/appointments/data', [AdminAppointmentController::class, 'data'])->name('appointments.data');
+        Route::get('/mail-settings', [MailSettingController::class, 'edit'])->name('mail-settings.edit');
+        Route::put('/mail-settings', [MailSettingController::class, 'update'])->name('mail-settings.update');
         Route::resource('blog', BlogPostController::class)->except(['show']);
     });
 });
