@@ -58,9 +58,9 @@
             <div class="book-form__glow" aria-hidden="true"></div>
             <p class="eyebrow" style="margin-bottom:0.85rem;">Booking form</p>
             <div class="form-grid">
-              <div class="form-field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required maxlength="255" placeholder="Full name"></div>
-              <div class="form-field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="255" placeholder="name@example.com"></div>
-              <div class="form-field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" required maxlength="50" placeholder="Best number to reach you"></div>
+              <div class="form-field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required maxlength="255" placeholder="Your full name"></div>
+              <div class="form-field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="255" placeholder="you@example.com"></div>
+              <div class="form-field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" inputmode="numeric" pattern="[0-9]+" title="Please enter numbers only" autocomplete="tel" required maxlength="15" placeholder="e.g. 07123456789"></div>
               <div class="form-field"><label for="service">Care you're exploring</label>
                 <select id="service" name="service" required>
                   <option value="">Select an option…</option>
@@ -244,14 +244,43 @@
 
   const successMsg = document.getElementById('successMsg');
   const submitBtn = document.getElementById('appointmentSubmit');
+  const originalLabel = submitBtn.innerHTML;
+  const phoneInput = document.getElementById('phone');
   const captchaImage = document.getElementById('captchaImage');
   const captchaRefresh = document.getElementById('captchaRefresh');
   const captchaSrcBase = '{{ url("captcha/default") }}';
+
+  function digitsOnly(value) {
+    return String(value || '').replace(/\D+/g, '');
+  }
+
+  phoneInput.addEventListener('input', function () {
+    this.value = digitsOnly(this.value);
+  });
+
+  phoneInput.addEventListener('paste', function (e) {
+    e.preventDefault();
+    var pasted = (e.clipboardData || window.clipboardData).getData('text');
+    var start = this.selectionStart;
+    var end = this.selectionEnd;
+    var next = digitsOnly(this.value.slice(0, start) + pasted + this.value.slice(end)).slice(0, this.maxLength || 15);
+    this.value = next;
+  });
 
   function refreshCaptcha() {
     captchaImage.src = captchaSrcBase + '?' + Date.now();
     const captchaInput = document.getElementById('captcha');
     if (captchaInput) captchaInput.value = '';
+  }
+
+  function setSubmitting(isSubmitting) {
+    submitBtn.disabled = isSubmitting;
+    submitBtn.setAttribute('aria-busy', isSubmitting ? 'true' : 'false');
+    if (isSubmitting) {
+      submitBtn.innerHTML = '<span class="btn-spinner" aria-hidden="true"></span><span>Sending…</span>';
+    } else {
+      submitBtn.innerHTML = originalLabel;
+    }
   }
 
   captchaRefresh.addEventListener('click', refreshCaptcha);
@@ -263,7 +292,7 @@
       return;
     }
 
-    submitBtn.disabled = true;
+    setSubmitting(true);
     fetch(form.action, {
       method: 'POST',
       headers: {
@@ -294,7 +323,7 @@
         alert('Something went wrong. Please try again.');
       })
       .finally(function () {
-        submitBtn.disabled = false;
+        setSubmitting(false);
       });
   });
 })();
