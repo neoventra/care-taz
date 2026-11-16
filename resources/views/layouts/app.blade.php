@@ -9,6 +9,9 @@
   <meta name="description" content="@yield('description')">
   @endif
   <link rel="icon" href="{{ asset('assets/images/favicon.png') }}">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ url('/sitemap.xml') }}">
+  <link rel="alternate" type="text/plain" title="LLM content index" href="{{ url('/llms.txt') }}">
+  <link rel="alternate" type="text/plain" title="LLM full summaries" href="{{ url('/llms-full.txt') }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Poppins:wght@400;500;600&family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">

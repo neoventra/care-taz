@@ -5,6 +5,15 @@
 
     RewriteEngine On
 
+    # Canonical host only. Local and staging hosts are left untouched.
+    RewriteCond %{HTTP_HOST} ^caretazhealthcare\.co\.uk$ [NC]
+    RewriteRule ^ https://www.caretazhealthcare.co.uk%{REQUEST_URI} [L,R=301]
+
+    RewriteCond %{HTTPS} !=on
+    RewriteCond %{HTTP:X-Forwarded-Proto} !https [NC]
+    RewriteCond %{HTTP_HOST} ^www\.caretazhealthcare\.co\.uk$ [NC]
+    RewriteRule ^ https://www.caretazhealthcare.co.uk%{REQUEST_URI} [L,R=301]
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]

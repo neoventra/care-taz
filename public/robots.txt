@@ -1,2 +1,51 @@
+# Caretaz Healthcare — https://www.caretazhealthcare.co.uk/
+# robots.txt is a crawl hint. It is not access control.
+# Allowing a crawler does not guarantee rankings or AI citations.
+
+# Search and answer-engine discovery.
+# This group covers Googlebot, Bingbot, Applebot, and AI crawlers that
+# fetch pages for search or user answers, including OAI-SearchBot,
+# ChatGPT-User, PerplexityBot, Perplexity-User, Claude-SearchBot and Claude-User.
+# Gemini answers that ground on Google Search use Googlebot, which is covered here.
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /admin
+# End anchor so this does not also block /uploads.
+Disallow: /up$
+
+# Model-training crawlers, kept separate from search discovery.
+# Blocking these does not remove pages from Google Search, Bing, or the
+# search crawlers named above. Google-Extended is not Googlebot.
+# GPTBot is not ChatGPT search. ClaudeBot is not Claude search.
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+Sitemap: https://www.caretazhealthcare.co.uk/sitemap.xml
+
+# Optional AI / LLM discovery files (not a ranking guarantee).
+# https://www.caretazhealthcare.co.uk/llms.txt
+# https://www.caretazhealthcare.co.uk/llms-full.txt

@@ -1,0 +1,50 @@
+# Caretaz Healthcare Ltd
+
+> CQC-regulated home care provider based in Nottingham, supporting adults to live safely, independently and with dignity at home.
+
+Caretaz Healthcare Ltd (styled Caretaz Healthcare LTD on the website) provides person-centred domiciliary care from its Nottingham office. The team supports adults, particularly older people and people with long-term conditions, from an hour a week to round-the-clock care. The website states the service is led by registered social workers and experienced private carers, and that Caretaz is registered with the Care Quality Commission and the Information Commissioner's Office. No CQC location ID or company number is published on the website.
+
+Office: Suite B/105, Blenheim Court, 86-88 Mansfield Road, Nottingham NG1 3HD, United Kingdom
+Phone: 0333 034 4121
+Email: info@caretazhealthcare.co.uk
+WhatsApp: +44 7869 706646 (https://wa.me/447869706646)
+Website: https://www.caretazhealthcare.co.uk/
+Service area: Nottingham and the surrounding areas. The website says care is provided across Nottingham and the surrounding areas. It does not publish a fixed list of towns. Availability for a postcode is confirmed by the care team.
+
+This file is an optional index for AI systems. It does not replace the website, robots.txt, or the XML sitemap. Allowing a crawler to read it does not guarantee a citation.
+
+## Services
+
+- [Urgent Care](https://www.caretazhealthcare.co.uk/services/urgent-care): Same-day and short-notice home care in Nottingham, typically arranged within 24–48 hours, when plans change suddenly.
+- [24-Hour Care](https://www.caretazhealthcare.co.uk/services/24-hour-care): Round-the-clock home care in Nottingham with rotating carers, as an alternative to moving into a care home.
+- [Hourly Care](https://www.caretazhealthcare.co.uk/services/hourly-care): Flexible hourly visiting care for personal care, meals, medication prompts and companionship, scheduled around the person.
+- [Live-In Care For Couples](https://www.caretazhealthcare.co.uk/services/live-in-care-for-couples): One coordinated live-in care plan so partners can stay together at home, with shared routines and support for both people.
+- [Overnight Care](https://www.caretazhealthcare.co.uk/services/overnight-care): Sleeping or waking overnight cover so people stay safe and comfortable through the night.
+- [Palliative and end-of-life care](https://www.caretazhealthcare.co.uk/services/palliative-care): Palliative and end-of-life home care focused on comfort, dignity and reassurance for the person and their family.
+- [Dementia Care](https://www.caretazhealthcare.co.uk/services/dementia-care): Dementia home care built around familiar routines, dignity and carers trained to support people living with dementia.
+- [Parkinson's Disease care](https://www.caretazhealthcare.co.uk/services/parkinsons-disease): Home care for Parkinson's disease, including medication timing, mobility support and care that adapts to fluctuating symptoms.
+- [Supported Living](https://www.caretazhealthcare.co.uk/services/supported-living): Supported living that protects independence, choice and community life, with help for daily living and getting out, without taking over the home.
+- [Holiday Companionship Care Breaks](https://www.caretazhealthcare.co.uk/services/holiday-companionship): A carer who travels with the person so a short break or holiday can still go ahead.
+- [Carer Respite Break Cover](https://www.caretazhealthcare.co.uk/services/carer-respite): Cover so family carers can rest, work or take a break while the person they support stays at home.
+- [Stroke Care](https://www.caretazhealthcare.co.uk/services/stroke-care): Post-stroke home care to rebuild confidence, mobility and daily routines after hospital discharge.
+- [Cancer Care](https://www.caretazhealthcare.co.uk/services/cancer-care): Practical home support through chemotherapy, radiotherapy and recovery, including personal care, appointments and companionship.
+- [Hospital to Home Care](https://www.caretazhealthcare.co.uk/services/hospital-to-home): Discharge support from ward to front door, including personal care, meals, medication prompts and mobility help.
+- [Companionship Care](https://www.caretazhealthcare.co.uk/services/companionship-care): Social visits with conversation, outings, hobbies and gentle routine prompts for people who are lonely.
+- [Housekeeping Services](https://www.caretazhealthcare.co.uk/services/housekeeping-services): Domestic help with cleaning, laundry, shopping and light organisation so the home stays manageable.
+
+## Company
+
+- [Home](https://www.caretazhealthcare.co.uk/): CQC-regulated home care in Nottingham from Caretaz Healthcare. Person-centred domiciliary care for adults and older people, from an hour a week to round-the-clock support at home.
+- [About us](https://www.caretazhealthcare.co.uk/about-us): Caretaz Healthcare is a CQC-regulated home care provider in Nottingham, led by registered social workers and experienced carers. Person-centred support from hourly visits to round-the-clock care. The About page states more than five years of experience and more than 50 professional carers.
+- [Home care services](https://www.caretazhealthcare.co.uk/services): Sixteen CQC-regulated home care services in Nottingham, including hourly visiting care, specialist condition support, live-in and 24-hour care, respite and hospital-to-home.
+- [Pricing](https://www.caretazhealthcare.co.uk/pricing): No fixed public tariff and no hidden fees. The rate is agreed before care begins and confirmed in writing after a free assessment. One-to-one care starts from a single hourly figure, which can vary with visit length, time of day, location, level of care and duration.
+- [FAQs](https://www.caretazhealthcare.co.uk/faqs): Published answers about CQC registration, DBS-checked carers, visit lengths, urgent cover, the Nottingham service area, privacy, pricing, couples care and hospital discharge.
+- [Careers](https://www.caretazhealthcare.co.uk/join-us): Careers at Caretaz Healthcare in Nottingham, including training, DBS support and flexible shifts with a CQC-regulated team.
+- [Contact](https://www.caretazhealthcare.co.uk/contact-us): Phone 0333 034 4121, email info@caretazhealthcare.co.uk, or visit Suite B/105, Blenheim Court, 86-88 Mansfield Road, Nottingham NG1 3HD. Urgent enquiries should be made by phone.
+- [Book a care assessment](https://www.caretazhealthcare.co.uk/appointment): Free, no-obligation home care assessment. The team listens, explains options and helps plan the next step.
+- [Care insights](https://www.caretazhealthcare.co.uk/blog): Articles published by Caretaz Healthcare. The blog index is public. An article URL belongs in the XML sitemap only after that post is published.
+
+## Optional
+
+- [XML sitemap](https://www.caretazhealthcare.co.uk/sitemap.xml): canonical public page URLs.
+- [Longer summary](https://www.caretazhealthcare.co.uk/llms-full.txt): short verified summaries of the same pages and FAQs.
